@@ -12,22 +12,47 @@ include_once "navbar.php"
     <!-- book a table Section  -->
     <div class="container-fluid has-bg-overlay text-center text-light has-height-lg middle-items" id="book-table">
         <div class="">
-            <h2 class="section-title mb-5">BOOK A TABLE</h2>
-            <div class="row mb-5">
-                <div class="col-sm-6 col-md-3 col-xs-12 my-2">
-                    <input type="email" id="booktable" class="form-control form-control-lg custom-form-control" placeholder="EMAIL">
-                </div>
-                <div class="col-sm-6 col-md-3 col-xs-12 my-2">
-                    <input type="number" id="booktable" class="form-control form-control-lg custom-form-control" placeholder="NUMBER OF GUESTS" max="20" min="0">
-                </div>
-                <div class="col-sm-6 col-md-3 col-xs-12 my-2">
-                    <input type="time" id="booktable" class="form-control form-control-lg custom-form-control" placeholder="EMAIL">
-                </div>
-                <div class="col-sm-6 col-md-3 col-xs-12 my-2">
-                    <input type="date" id="booktable" class="form-control form-control-lg custom-form-control" placeholder="12/12/12">
-                </div>
-            </div>
-            <a href="#" class="btn btn-lg btn-primary" id="rounded-btn">FIND TABLE</a>
+        <button type="button" class="btn btn-info">Nuevo</button>
+        <h6 class="section-secondary-title mt-5">USUARIOS</h6>
+        
+        <?php
+            include_once "../conexion/conexion.php";
+            $query="SELECT u.*,p.descripcion as perfil FROM usuarios u 
+                    JOIN perfil p ON u.perId=p.id;";
+            $ver=mysqli_query($db,$query);
+
+        ?>
+      <table class="table table-striped">
+         <thead>
+            <tr>
+               <th scope="col">#</th>
+               <th scope="col">PERFIL</th>
+               <th scope="col">CÉDULA</th>
+               <th scope="col">NOMBRE</th>
+               <th scope="col">CORREO</th>
+               <th scope="col">TELÉFONO</th>
+               <th scope="col">USUARIO</th>
+               <th scope="col">ESTADO</th>
+            </tr>
+         </thead>
+         <tbody>
+            <?php
+                while($consulta = mysqli_fetch_array($ver))
+                {
+            ?>
+            <tr>
+               <th scope="row"><?php echo $consulta['id'] ?></th>
+               <td><?php echo $consulta['perfil'] ?></td>
+               <td><?php echo $consulta['cedula'] ?></td>
+               <td><?php echo $consulta['nombre'] ?></td>
+               <td><?php echo $consulta['correo'] ?></td>
+               <td><?php echo $consulta['telefono'] ?></td>
+               <td><?php echo $consulta['usuario'] ?></td>
+               <td><?php echo $consulta['estado'] ?></td>
+            </tr>
+            <?php } ?>
+         </tbody>
+      </table>
         </div>
     </div>
 
