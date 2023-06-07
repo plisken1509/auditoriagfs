@@ -19,7 +19,7 @@ if (isset($_POST['enviar'])) {
   $_SESSION['perfil']=$ver['descripcion'];
 
   // $perfil=$ver['docCedula'];
-    header('location:principal.php');
+    header('location:vistas/principal.php');
   
 }
   echo '<script> alert("Datos Erroneos")</script>';
