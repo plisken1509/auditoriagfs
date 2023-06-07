@@ -1,5 +1,5 @@
 <?php
-include_once "vistas/navbar.php"
+include_once "navbar.php"
 ?>
     <!-- header -->
     <header id="home" class="header">
@@ -32,5 +32,5 @@ include_once "vistas/navbar.php"
     </div>
 
 <?php
-include_once "vistas/footer.php"
+include_once "footer.php"
 ?> 
