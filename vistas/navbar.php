@@ -28,18 +28,18 @@
                     <a class="nav-link" href="#home">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#about">About</a>
+                    <a class="nav-link" href="#about">Usuarios</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#gallary">Gallary</a>
+                    <a class="nav-link" href="#gallary">Auditoria</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#book-table">Book-Table</a>
                 </li>
             </ul>
             <a class="navbar-brand m-auto" href="#">
-                <img src="assets/imgs/logo.svg" class="brand-img" alt="">
-                <span class="brand-txt">Food Hut</span>
+                <img src="img/gou.png" class="brand-img" alt="">
+                <span class="brand-txt">GOURMET FOOD SERVICE</span>
             </a>
             <ul class="navbar-nav">
                 <li class="nav-item">
@@ -49,7 +49,7 @@
                     <a class="nav-link" href="#testmonial">Reviews</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#contact">Contact Us</a>
+                    <a class="nav-link" href="#contact">Reportes</a>
                 </li>
                 <li class="nav-item">
                     <a href="components.html" class="btn btn-primary ml-xl-4">Components</a>
