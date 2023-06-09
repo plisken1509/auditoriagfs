@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -59,7 +60,7 @@
                     <a class="nav-link" href="#contact">Reportes</a>
                 </li>
                 <li class="nav-item">
-                    <a href="components.html" class="btn btn-primary ml-xl-4">Components</a>
+                    <a href="../logica/salir.php" class="btn btn-primary ml-xl-4">Salir</a>
                 </li>
             </ul>
         </div>
