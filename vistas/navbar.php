@@ -25,11 +25,18 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav">
-                <li class="nav-item">
-                    <a class="nav-link" href="#home">Home</a>
+                <li class="nav-item" >
+                    <a class="nav-link" href="principal.php">Home</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#about">Usuarios</a>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
+                    Mantenimiento
+                    </a>
+                    <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="usuarios.php">Usuarios</a></li>
+                    <li><a class="dropdown-item" href="comedores.php">Comedores</a></li>
+                    <li><a class="dropdown-item" href="asignacion.php">Asignación de comedores</a></li>
+                    </ul>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#gallary">Auditoria</a>
@@ -39,7 +46,7 @@
                 </li>
             </ul>
             <a class="navbar-brand m-auto" href="#">
-                <img src="img/gou.png" class="brand-img" alt="">
+                <img src="../img/gou.png" class="brand-img" alt="">
                 <span class="brand-txt">GOURMET FOOD SERVICE</span>
             </a>
             <ul class="navbar-nav">
