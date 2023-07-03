@@ -39,7 +39,7 @@
                     </ul>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#gallary">Auditoria</a>
+                    <a class="nav-link" href="auditoria.php">Auditoria</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#book-table">Book-Table</a>

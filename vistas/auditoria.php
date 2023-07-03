@@ -1,3 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script type="text/javascript">
+    function agregarEvidencia(){
+    alert("star2");
+    var cliente=document.getElementById("archivo[]").value;
+    alert("star");
+    }
+  </script>
+</head>
 <?php
 include_once "navbar.php";
 include_once "../conexion/conexion.php";
@@ -31,6 +42,7 @@ $enviar=mysqli_query($db,$query);
         
         
        <?php
+            $aid=$_REQUEST['id'];
             $query2="select * from categoria";
             $enviar2=mysqli_query($db,$query2);  
             $ver2=mysqli_fetch_array($enviar2);
@@ -59,17 +71,40 @@ $enviar=mysqli_query($db,$query);
             $ver3=mysqli_fetch_array($enviar3);
 
             do{
+
                 echo '<tbody>
+               
                <tr>
                <th scope="row" style="color:white;">'.$ver3['id'].'</th>
                <td style="color:white;">'.$ver3['descripcion'].'</td>
+               
+               <form name="form'.$ver3['id'].'" id="form1" method="post" action="guardarEvidencias.php" enctype="multipart/form-data">
                <td style="color:white;"><select id="cumple" name="cumple" class="form-control">
                <option value="0">Seleccione</option>
                <option value="si">SI</option>
                <option value="no">NO</option>
                </select></td>
                <td style="color:white;"><input type="text" name="observacion" id="observacion" class="form-control"></td>
-               <td style="color:white;"><input type="file" name="evidencia" id="evidencia" class="form-control"></td>
+               <td style="color:white;">
+               
+                            <center>
+                            <input type="hidden" class="form-control"style="width:200px;" name="id" value="'.$ver3['id'].'">
+                            <input type="hidden" class="form-control"style="width:200px;" name="aid" value="'.$aid.'">
+                            <section id="pregunta'.$ver3['id'].'">
+                                <input type="file" class="form-control" id="archivo[]" name="archivo[]" multiple="" style="width:200px;">
+                                </section>';
+                                $query30="select * from preguntasvisita where preId=".$ver3['id']." and visId=$aid";
+                                $enviar30=mysqli_query($db,$query30);  
+                                $ver30=mysqli_num_rows($enviar30);
+                                if ($ver30>0) {
+                                  echo '<h5>Respuesta Guardada</h5>';
+                                }else{
+                                  echo '<button type="submit" class="btn btn-primary" style="white-space: nowrap;">Guardar</button>';
+                                }
+                      echo'
+                            </center>                            
+                            </form>
+                            </td>
                </tr>
                </tbody>';
             }while($ver3=mysqli_fetch_array($enviar3));
