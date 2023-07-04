@@ -38,8 +38,14 @@
                     <li><a class="dropdown-item" href="asignacion.php">Asignación de comedores</a></li>
                     </ul>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="auditoria.php">Auditoria</a>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
+                    Auditoria
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="listadoVisitas.php">Auditoría</a></li>
+                        <li><a class="dropdown-item" href="nuevaAuditoria.php">Nueva Auditoría</a></li>
+                    </ul>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#book-table">Book-Table</a>
